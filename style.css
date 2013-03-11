@@ -105,6 +105,8 @@ body {
 
 h1.title{
    font-family: 'Fjalla One',sans-serif;
+   font-size: 3em;
+   margin: 20px 0 0 0;
 }
 
 
@@ -214,7 +216,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b005e', end
    width: 200px;
    height: 200px;
    margin-left: 20px;
-   -moz-transform: rotate(-25deg);
+-webkit-transform:rotate(-25deg);
+   -moz-transform:rotate(-25deg);
+    -ms-transform:rotate(-25deg);
+     -o-transform:rotate(-25deg);
+        transform:rotate(-25deg);
 }
 
 .gallery a{
@@ -276,10 +282,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b005e', end
    overflow: visible;
 }
 
-
-
-
-
+nav a{
+   text-shadow: -1px 1px 0 #000;
+ -webkit-transition:color 0.7s ease-in-out 0s;
+   -moz-transition:color 0.7s ease-in-out 0s;
+     -o-transition:color 0.7s ease-in-out 0s;
+        transition:color 0.7s ease-in-out 0s;
+        font-family: Frutiger, "Frutiger Linotype", Univers, Calibri,"Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     }
 
 /* ==========================================================================
    Media Queries
@@ -297,12 +307,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b005e', end
         margin: 0 1.7%;
         padding: 25px 2%;
         margin-bottom: 0;
-        text-shadow: -1px 1px 0 #000;
- -webkit-transition:color 0.7s ease-in-out 0s;
-   -moz-transition:color 0.7s ease-in-out 0s;
-     -o-transition:color 0.7s ease-in-out 0s;
-        transition:color 0.7s ease-in-out 0s;
-
+     
     }
 
     nav li:first-child a {
