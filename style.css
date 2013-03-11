@@ -269,8 +269,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b005e', end
    width: 57%;
 }
 
-.projects,.tutorials{
+.tutorials{
    height: 500px;
+}
+
+.projects{
+   width: 70%;
+   padding: 20px 0 50px 10%;
+}
+
+.projects iframe{
+   float: left;
+   padding: 15px 0;
 }
 
 .contact {
