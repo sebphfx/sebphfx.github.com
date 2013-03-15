@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+
+
+<div id="post">
+ <div class="arrows">
+   {% if page.previous.url %}
+   <a href= "{{ page.previous.url }}">Previous</a>
+      {% endif %}
+
+   {% if page.next.url %}
+   <a href= "{{ page.next.url }}">Next</a>
+      {% endif %}
+   </div>
+   <h2>{{ page.title }}</h2>
+
+   
+<p class="meta">
+<span class="date">{{ page.date | date: '%b %d, %Y' }}</span>
+</p>
+
+{{ content }}
+
+
+<ul class="tags"> 
+   <li>Tags:</li>
+   {% for tag in page.tags %}
+   <li><a href="/tags/#{{ tag | slugize }}">{{ tag }}</a></li>
+
+   {% endfor %}
+</ul>
+
+<hr>
+
+</div>
+
+<div class="sidebar">
+<a href="https://twitter.com/jumplinkdesign" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @jumplinkdesign</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<ul class="sidebar_tags"> 
+   <h4>Tags</h4>
+   {% for t in site.tags %}
+   <li><a href="/tags/#{{ t[0] | slugize }}">{{ t[0] }}</a></li>
+
+   {% endfor %}
+</ul>
+
+
+</div>
+
+
+
+<div id="comments">
+
+   <div id="disqus_thread"></div>
+ <script type="text/javascript">
+
+      var disqus_shortname = 'jumplinkdesign'; 
+
+      (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+       })();
+
+(function () {
+ var s = document.createElement('script'); s.async = true;
+ s.type = 'text/javascript';
+ s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+ (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+ }());
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+
